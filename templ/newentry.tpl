@@ -16,19 +16,19 @@
 						<div class="modal-body">
 							<form class="form-horizontal" role="form">
 								<div class="form-group">
-									 <label for="new_public_port" class="col-sm-2 control-label">public port</label>
+									 <label for="new_public_port" class="col-sm-2 control-label">公网端口</label>
 									<div class="col-sm-10">
 										<input type="text" class="form-control" id="new_public_port" />
 									</div>
 								</div>
 								<div class="form-group">
-									 <label for="new_local_port" class="col-sm-2 control-label">local port</label>
+									 <label for="new_local_port" class="col-sm-2 control-label">内网端口</label>
 									<div class="col-sm-10">
 										<input type="text" class="form-control" id="new_local_port" />
 									</div>
 								</div>
 								<div class="form-group">
-									 <label for="new_local_ip" class="col-sm-2 control-label">local ip</label>
+									 <label for="new_local_ip" class="col-sm-2 control-label">内网ip</label>
 									<div class="col-sm-10">
 										<input type="text" class="form-control" id="new_local_ip" />
 									</div>
@@ -41,6 +41,11 @@
 										</div>
 									</div>
 								</div>
+
+										<select>
+										<option>tcp</option>
+										<option>udp</option> 
+										</select>
 								<div class="form-group">
 									<div class="col-sm-offset-2 col-sm-10">
 										 <button type="submit" class="btn btn-default">Add</button>
