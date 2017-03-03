@@ -15,8 +15,8 @@
 								new entry
 							</h4>
 						</div>
-						<div class="modal-body">
-							<form class="form-horizontal" role="form">
+						<form class="form-horizontal" role="form">
+							<div class="modal-body">
 								<div class="form-group">
 									 <label for="new_public_port" class="col-sm-2 control-label">公网端口</label>
 									<div class="col-sm-10">
@@ -57,12 +57,12 @@
 										 <button type="submit" class="btn btn-default">Add</button>
 									</div>
 								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> 
-							 <button type="button" class="btn btn-primary">保存</button>
-						</div>
+							</div>
+							<div class="modal-footer">
+								 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> 
+								 <button type="button" class="btn btn-primary">保存</button>
+							</div>
+						</form>
 					</div>
 					
 				</div>
