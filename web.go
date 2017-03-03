@@ -58,7 +58,7 @@ type iptables struct {
 	tpl template.Template
 }
 
-func (ip *iptables) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (ip *iptables) showall(w http.ResponseWriter, r *http.Request) {
 	re := regexp.MustCompile(`-A PREROUTING -d.*\n`)
 	entrys_string := re.FindAllString(getPREROUTING(), -1)
 
@@ -114,6 +114,13 @@ func (ip *iptables) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	tTail := template.Must(template.ParseFiles("./templ/tail.tpl"))
 	tTail.Execute(w, nil)
 
+}
+func (ip *iptables) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+
+	if r.Method == "POST" {
+		fmt.Println(r.PostForm)
+	}
+	ip.show(w, r)
 }
 func main() {
 	//fmt.Println(getUserInfos())

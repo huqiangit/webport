@@ -15,38 +15,38 @@
 								new entry
 							</h4>
 						</div>
-						<form class="form-horizontal" role="form">
+						<form class="form-horizontal" role="form" action="on_new_entry">
 							<div class="modal-body">
 								<div class="form-group">
 									 <label for="new_public_port" class="col-sm-2 control-label">公网端口</label>
 									<div class="col-sm-10">
-										<input type="text" class="form-control" id="new_public_port" />
+										<input type="text" name="new_public_port" class="form-control" id="new_public_port" />
 									</div>
 								</div>
 								<div class="form-group">
 									 <label for="new_local_port" class="col-sm-2 control-label">内网端口</label>
 									<div class="col-sm-10">
-										<input type="text" class="form-control" id="new_local_port" />
+										<input type="text" name="new_local_port" class="form-control" id="new_local_port" />
 									</div>
 								</div>
 								<div class="form-group">
 									 <label for="new_local_ip" class="col-sm-2 control-label">内网ip</label>
 									<div class="col-sm-10">
-										<input type="text" class="form-control" id="new_local_ip" />
+										<input type="text" name="new_local_ip" class="form-control" id="new_local_ip" />
 									</div>
 								</div>
 
 								<div class="form-group">
 									<div class="col-sm-offset-2 col-sm-10">
 										<div class="checkbox">
-											 <label><input type="checkbox" />record</label>
+											 <label><input name="new_record" type="checkbox" />record</label>
 										</div>
 									</div>
 								</div>
 								<div class="form-group">
 									 <label for="new_proto" class="col-sm-2 control-label">协议类型</label>
 									<div class="col-sm-10">
-										<select id="new_proto">
+										<select name="new_proto" id="new_proto">
 										<option>tcp</option>
 										<option>udp</option> 
 										</select> 
