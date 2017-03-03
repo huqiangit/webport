@@ -1,3 +1,5 @@
+
+
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
@@ -41,11 +43,15 @@
 										</div>
 									</div>
 								</div>
-
-										<select>
+								<div class="form-group">
+									 <label for="new_proto" class="col-sm-2 control-label">协议类型</label>
+									<div class="col-sm-10">
+										<select id="new_proto">
 										<option>tcp</option>
 										<option>udp</option> 
-										</select>
+										</select> 
+									</div>
+								</div> 
 								<div class="form-group">
 									<div class="col-sm-offset-2 col-sm-10">
 										 <button type="submit" class="btn btn-default">Add</button>
