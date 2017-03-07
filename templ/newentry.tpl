@@ -1,9 +1,22 @@
+<script>
+<!--document.getElementById("sessionkey").value = getCookie("key"); -->
+
+function getCookie(cname){
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i].trim();
+		if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	}
+	return "";
+}
 
 
+</script>
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-			
+				
 			<button id="modal-newentry" href="#modal-container-newentry" role="button" class="btn" data-toggle="modal">添加</button>
 			
 			<div class="modal fade" id="modal-container-newentry" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -15,7 +28,10 @@
 								new entry
 							</h4>
 						</div>
-						<form class="form-horizontal" role="form" action="on_new_entry">
+						<form class="form-horizontal" role="form" method="post">
+							<input type="hidden" name="operate" value="add"/>
+							<input type="hidden" name="sessionkey" value="" id="sessionkey"/>
+
 							<div class="modal-body">
 								<div class="form-group">
 									 <label for="new_public_port" class="col-sm-2 control-label">公网端口</label>
@@ -55,7 +71,7 @@
 							</div>
 							<div class="modal-footer">
 								 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> 
-								 <button type="submit" class="btn btn-primary">保存</button>
+								 <button type="submit" class="btn btn-primary">添加</button>
 							</div>
 						</form>
 					</div>
